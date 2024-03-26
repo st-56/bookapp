@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Popular Books",
+        "horizontal": true,
+        "data": [
+            {
+                "book_name": "Fashionopolis",
+                "author": "Dana Thomas",
+                "image": "https://github.com/st-56/ReactNative_wk3_BookList/blob/main/assets/bookimg/img_book_fashinopolis.jpg?raw=true"
+
+            },
+            {
+                "book_name": "Chanel",
+                "author": "Patrick Mauriès",
+                "image": "https://github.com/st-56/ReactNative_wk3_BookList/blob/main/assets/bookimg/img_book_chanel.jpg?raw=true"
+            },
+            {
+                "book_name": "Calligraphy",
+                "author": "June & Lucy",
+                "image": "https://github.com/st-56/ReactNative_wk3_BookList/blob/main/assets/bookimg/img_book_calligraphy.jpg?raw=true"
+            }
+        ]
+    },
+    {
+        "title": "Newest",
+        "data": [
+            {
+                "book_name": "Yves Saint Laurent",
+                "author": "Suzy Menkes",
+                "image": "https://github.com/st-56/ReactNative_wk3_BookList/blob/main/assets/bookimg/img_book_ysl.jpg?raw=true"
+            },
+            {
+                "book_name": "The Book of Signs",
+                "author": "Rudolf Koch",
+                "image": "https://github.com/st-56/ReactNative_wk3_BookList/blob/main/assets/bookimg/img_book_tbos.jpg?raw=true"
+            },
+            {
+                "book_name": "Stitched Up",
+                "author": "Tansy E. Hoskins",
+                "image": "https://github.com/st-56/ReactNative_wk3_BookList/blob/main/assets/bookimg/img_book_stitchedup.jpg?raw=true"
+            }
+        ]
+    }
+]       
