@@ -1,8 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
-import { DrawerActions } from "@react-navigation/native";
+//import { DrawerActions } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
-const Header = ({navigation}) => {
+const Header = () => {
+  const navigation = useNavigation();
+
   return (
       <View style={styles.headerStyle}>
         <Pressable onPress = {() => navigation.toggleDrawer()}>
@@ -27,9 +30,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     //alignItems: "center",
     //height: 60,
-    paddingHorizontal: 5,
+    paddingHorizontal: 20,
     paddingVertical: 5,
     flexDirection: "row",
+    paddingTop: 20
     //shadowColor: "#000",
     //shadowOffset: { width: 0, height: 2 },
     //shadowOpacity: 0.2,
@@ -40,8 +44,8 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   icon: {
-    width: 24,
-    height: 24
+    width: 30,
+    height: 30
   }
 });
 

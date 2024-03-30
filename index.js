@@ -11,6 +11,7 @@ import DetailScreen from "../screen/DetailScreen";
 import SettingScreen from "../screen/SettingScreen";
 import DisplaySettingScreen from "../screen/DisplaySettingScreen";
 import AccountScreen from "../screen/AccountScreen";
+import Header from "../component/Header";
 import booklist from "../json/book_section.json";
 import WishlistScreen from "../screen/WishlistScreen";
 import MyBookScreen from "../screen/MyBookScreen";
@@ -35,6 +36,7 @@ const HomeStack = ({navigation}) => {
                 component={BookScreen}
                 options={{
                     //headerShown: false,
+                    header: () => <Header />,
                     title: booklist.title,
                     headerTitleStyle: {
                         fontWeight: '400',
@@ -54,7 +56,7 @@ const HomeStack = ({navigation}) => {
                 name="Detail"
                 component={DetailScreen}
                 options={({ route }) => ({
-                    headerShown: false,
+                    //headerShown: false,
                     title: route.params.title,
                     headerStyle: {
                         backgroundColor: "white"
@@ -76,7 +78,8 @@ const WishlistStack = ({navigation}) => {
                 name="Wishlist"
                 component={WishlistScreen}
                 options={{
-                    headerShown: false,
+                    //headerShown: false,
+                    header: () => <Header />,
                     headerLeft: () => (
                         <MaterialCommunityIcons 
                             name={'menu'}
@@ -100,7 +103,8 @@ const MyBookStack = ({navigation}) => {
                 name="MyBook"
                 component={MyBookScreen}
                 options={{
-                    headerShown: false,
+                    //headerShown: false,
+                    header: () => <Header />,
                     headerLeft: () => (
                         <MaterialCommunityIcons 
                             name={'menu'}
@@ -124,7 +128,8 @@ const AccountStack = ({navigation}) => {
                 name="Account"
                 component={AccountScreen}
                 options={{
-                    headerShown: false,
+                    //headerShown: false,
+                    header: () => <Header />,
                     headerLeft: () => (
                         <MaterialCommunityIcons 
                             name={'menu'}
@@ -149,7 +154,7 @@ const MyTab = () => {
                 name="HomeStack"
                 component={HomeStack}
                 options={{
-                    headerShown: false,
+                    //headerShown: false,
                     title: "Home",
                     tabBarIcon: ({color}) => (
                         <MaterialCommunityIcons name="home" color={color} size={26} />
@@ -232,7 +237,7 @@ const MyDrawer = () => {
                 name="AccountStack"
                 component={AccountStack}
                 options={{
-                    //headerShown: false,
+                    headerShown: false,
                     drawLabel: "Account",
                     drawerIcon: ({color}) => (
                         <MaterialCommunityIcons name="account-circle" color={color} size={26} />
@@ -244,6 +249,7 @@ const MyDrawer = () => {
                 component={SettingStack}
                 options={{
                     //headerShown: false,
+                    header: () => <Header />,
                     drawLabel: "Setting",
                     drawerIcon: ({color}) => (
                         <MaterialCommunityIcons name="cog" color={color} size={26} />
