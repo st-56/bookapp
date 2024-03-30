@@ -40,7 +40,7 @@ const styles=StyleSheet.create({
     },
     starnum: {
         flexDirection: "row",
-        marginTop: 3
+        marginTop: 20
     }
 });
 

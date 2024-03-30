@@ -45,6 +45,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     paddingLeft: 12,
     width: 140,
+    marginTop: 8,
+    marginBottom: 20
   },
   headerTitleStyle: {
     fontSize: 14,

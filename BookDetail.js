@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
   headerContentStyle: {
     flexDirection: "column",
     justifyContent: "space-around",
-    paddingLeft: 10
+    paddingLeft: 10,
+    marginTop: 10
   },
   cardContainerStyle: {
     //borderWidth: 1,

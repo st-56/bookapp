@@ -7,7 +7,7 @@ import booklist from "../json/book_section.json";
 
 const BookScreen = ({ navigation }) => {
     return (
-        <View style={{flex: 1}}>
+        <View style={{flex: 1, backgroundColor: "white"}}>
             <BookList
                 list={booklist.BookList}
                 navigation={navigation}
