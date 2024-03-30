@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image } from "react-native";
+import { Text, Image, StyleSheet } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -56,7 +56,7 @@ const HomeStack = ({navigation}) => {
                 name="Detail"
                 component={DetailScreen}
                 options={({ route }) => ({
-                    //headerShown: false,
+                    headerShown: false,
                     title: route.params.title,
                     headerStyle: {
                         backgroundColor: "white"
@@ -199,15 +199,31 @@ const CustomDrawerContent = (props) => {
             contentContainerStyle={{paddingTop: 0}}
         >
             <Image
+                style={styles.drawImg}
                 source={{uri: "https://github.com/st-56/ReactNative_wk3_BookList/blob/main/assets/bookimg/img_avatar.png?raw=true"}}
             />
-            <Text style={"fontSize: 30"}>
+            <Text style={styles.username}>
                 May
             </Text>
             <DrawerItemList {...props} />
         </DrawerContentScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+    drawImg: {
+        width: 50,
+        height: 50,
+        marginTop: 30,
+        marginLeft: 20
+    },
+    username: {
+        fontSize: 24,
+        marginBottom: 20,
+        marginLeft: 20,
+        fontWeight: "bold"
+    }
+});
 
 const MyDrawer = () => {
     return (

@@ -1,11 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import { StyleSheet, ScrollView, Text, View, Image, Button, Linking, Pressable } from 'react-native';
+import Star from "../component/Star";
 
 const DetailScreen = ({ route, navigation }) => {
     const { book_name,
             author,
-            url,
+            starSections,
+            star,
             image,
             description
         } = route.params;
@@ -45,6 +47,10 @@ const DetailScreen = ({ route, navigation }) => {
                         <Text style={styles.author}>
                             {author}
                         </Text>
+                        <View style={{flex: 1, flexDirection: "row"}}>
+                            {starSections? <Star star={star} style={styles.star} />: null}
+                            {starSections? <Text style={styles.starscore}>{star}.0 / 5.0</Text>: null}
+                        </View>
                         <Text style={styles.description}>
                             {description}
                         </Text>
@@ -102,30 +108,41 @@ const styles = StyleSheet.create({
         padding: 20,
         marginTop: 20,
         marginBottom: 150,
-        marginHorizontal: 80
+        marginHorizontal: 80,
+        textAlign: 'center'
     },
     name: {
         fontWeight:'bold',
         fontSize: 24,
         fontFamily: "Roboto",
         lineHeight: 45,
-        paddingHorizontal: 80,
-        marginTop: 2
+        //paddingHorizontal: 80,
+        marginTop: 2,
+        textAlign: 'center'
     },
     author: {
         fontSize: 16,
         color: "#666666",
         marginTop: 5,
-        marginHorizontal: 5,
+        //marginHorizontal: 5,
         fontFamily: "Roboto",
-        paddingHorizontal: 130
+        //paddingHorizontal: 130,
+        textAlign: 'center'
+    },
+    starscore: {
+        fontSize: 16,
+        color: "black",
+        marginTop: 5,
+        fontFamily: "Roboto",
+        textAlign: 'center'
     },
     description: {
         fontSize: 16,
         color: "black",
         marginTop: 15,
-        paddingHorizontal: 40,
-        fontFamily: "Roboto"
+        //paddingHorizontal: 40,
+        fontFamily: "Roboto",
+        textAlign: 'center'
     }
 });
 
